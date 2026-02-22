@@ -26,7 +26,7 @@ Dependencies: None (Uses standard Python libraries).
 INSTALLATION AND USAGE
 
 Clone the Repository
-git clone https://github.com/yourusername/naija-food-maker.git
+git clone (https://github.com/hosannaute/NaijaFoodMaker)
 cd naija-food-maker
 
 Run the Application
