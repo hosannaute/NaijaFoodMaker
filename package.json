@@ -1,0 +1,13 @@
+{
+  "name": "naija-food-maker",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "An interactive Nigerian recipe discovery kitchen",
+  "scripts": {
+    "dev": "node server.js",
+    "start": "node server.js",
+    "test": "node tests/matching.test.js"
+  },
+  "engines": { "node": ">=20" }
+}

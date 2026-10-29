@@ -151,7 +151,7 @@ RECIPES = [
         "name": "Eba (Garri Swallow)",
         "description": "A simple staple made by pouring garri into hot water and stirring until firm. Goes with virtually any soup.",
         "required": {"Cassava / Garri"},
-        "bonus": {},
+        "bonus": set(),
         "serve_with": "Any Nigerian soup -- egusi, ogbono, okra, etc.",
     },
     {

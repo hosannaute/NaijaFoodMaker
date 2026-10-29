@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#163f32">
+  <meta name="description" content="A little inspiration for your Nigerian kitchen. Pick the ingredients you have and discover what you can cook.">
+  <title>Naija Food Maker — A little taste of home</title>
+  <link rel="icon" href="./assets/mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./styles.css">
+  <script type="module" src="./app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#kitchen">Skip to your kitchen</a>
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="Naija Food Maker home"><span class="brand-icon" aria-hidden="true"><svg class="icon icon-flower" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" aria-hidden="true"><path d="M20 3v34M3 20h34M8 8l24 24M8 32 32 8"/></svg></span><span>naija<span class="brand-light">foodmaker</span><small>A LITTLE TASTE OF HOME</small></span></a>
+    <nav aria-label="Main navigation"><a class="nav-discover" href="#discover">Discover dishes</a><a href="#kitchen">My kitchen</a><button id="saved-nav" class="saved-nav"><span aria-hidden="true">♡</span> Saved <span id="saved-count">0</span></button></nav>
+  </header>
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy"><div class="eyebrow"><span></span> GOOD FOOD. NO GUESSWORK.</div><h1 id="hero-title">A little inspiration.<br>A whole lot of <em>flavour.</em></h1><p>Your ingredients. Our Nigerian favourites.<br>Let’s turn what’s in your kitchen into something delicious.</p><a href="#kitchen" class="button primary">What can I cook? <span aria-hidden="true"><svg class="icon icon-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></span></a><div class="hero-note"><span class="mini-flower" aria-hidden="true"><svg class="icon icon-flower" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" aria-hidden="true"><path d="M20 3v34M3 20h34M8 8l24 24M8 32 32 8"/></svg></span> Made for our kitchens. Inspired by home.</div></div>
+      <div class="hero-art"><span class="art-ring ring-one"></span><span class="art-ring ring-two"></span><span class="art-label">THE TASTE OF HOME, REIMAGINED</span><img src="./assets/jollof.svg" alt="Illustration of vibrant jollof rice with chicken, plantain, and fresh herbs" width="600" height="600"><div class="hero-sticker"><span aria-hidden="true">✦</span><div>Small pantry.<br><strong>Big possibilities.</strong></div></div><span class="art-caption">JOLLOF & GOOD COMPANY <span><svg class="icon icon-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></span></span></div>
+    </section>
+    <div class="values-strip"><span><b aria-hidden="true"><svg class="icon icon-flower" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" aria-hidden="true"><path d="M20 3v34M3 20h34M8 8l24 24M8 32 32 8"/></svg></b> 16 Nigerian favourites</span><span><b aria-hidden="true">⌁</b> Your pantry, your possibilities</span><span><b aria-hidden="true">♡</b> Less waste. More flavour.</span></div>
+    <section id="kitchen" class="kitchen-section" aria-labelledby="kitchen-title">
+      <div class="section-heading"><div><div class="eyebrow dark">LET’S START WITH WHAT YOU HAVE</div><h2 id="kitchen-title">What’s in your kitchen?</h2><p>Pick your ingredients. We’ll take care of the inspiration.</p></div><span class="step-label"><span>01</span> BUILD YOUR PANTRY</span></div>
+      <div class="kitchen-layout">
+        <div class="pantry-panel"><div class="pantry-toolbar"><label class="search-field"><span aria-hidden="true">⌕</span><input id="ingredient-search" type="search" placeholder="Find an ingredient…" aria-label="Search ingredients"><kbd>/</kbd></label><button id="select-category" class="text-button">Select category</button></div><div class="category-tabs" id="categories" role="tablist" aria-label="Ingredient categories"></div><div class="ingredient-area" id="ingredient-panel" role="tabpanel" tabindex="0"><div id="ingredient-list" class="ingredient-grid"></div></div><div class="pantry-tip"><span aria-hidden="true">✧</span><p>A little shortcut? <button id="try-jollof" class="inline-button">Try a jollof pantry <span aria-hidden="true"><svg class="icon icon-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></span></button></p></div></div>
+        <aside class="basket" aria-labelledby="basket-title"><div class="basket-heading"><h3 id="basket-title">Your little pantry <span id="pantry-count">0</span></h3><button id="clear-pantry" class="text-button">Clear</button></div><div id="selected-ingredients" class="selected-ingredients"></div><div class="basket-bottom"><span class="basket-status" id="pantry-status"></span><a href="#discover" class="button green">Explore my dishes <span aria-hidden="true">↓</span></a><small>Your pantry stays saved on this device.</small></div></aside>
+      </div>
+    </section>
+    <section id="discover" class="discover-section" aria-labelledby="discover-title"><div class="section-heading"><div><div class="eyebrow dark">SOMETHING DELICIOUS IS WAITING</div><h2 id="discover-title">Meet your next meal.</h2><p id="results-description">Old favourites. New possibilities. Always a taste of home.</p></div><span class="step-label"><span>02</span> FIND YOUR INSPIRATION</span></div><div class="results-toolbar"><div id="recipe-filters" class="filter-group" role="group" aria-label="Filter dishes"><button data-filter="all" class="active" aria-pressed="true">All dishes <span>16</span></button><button data-filter="ready" aria-pressed="false">Ready to cook <span id="ready-count">0</span></button><button data-filter="almost" aria-pressed="false">Almost there</button><button data-filter="saved" aria-pressed="false">♡ Saved</button></div><label class="recipe-search"><span aria-hidden="true">⌕</span><input id="recipe-search" type="search" placeholder="Find a dish…" aria-label="Search dishes"></label></div><p id="result-count" class="sr-only" role="status" aria-live="polite"></p><div id="recipe-grid" class="recipe-grid"></div></section>
+    <section class="closing-note"><span aria-hidden="true"><svg class="icon icon-flower" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" aria-hidden="true"><path d="M20 3v34M3 20h34M8 8l24 24M8 32 32 8"/></svg></span><div><h2>Good food starts with what you have.</h2><p>A little creativity. A few familiar ingredients. A reason to gather.</p></div><a href="#kitchen">Back to my kitchen <span aria-hidden="true"><svg class="icon icon-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></span></a></section>
+  </main>
+  <footer><a class="footer-brand" href="#">naija<span>foodmaker</span></a><span>FROM OUR KITCHEN, WITH LOVE. <span aria-hidden="true">♡</span></span><span>Nigerian roots. Endless flavour.</span></footer>
+  <dialog id="recipe-dialog" aria-labelledby="dialog-title"><div id="dialog-content"></div></dialog>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <noscript><p>This kitchen needs JavaScript to select ingredients and match recipes. Please enable JavaScript in your browser.</p></noscript>
+</body>
+</html>
