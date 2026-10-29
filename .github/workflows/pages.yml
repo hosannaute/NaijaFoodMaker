@@ -21,7 +21,7 @@ jobs:
         with:
           node-version: '24'
       - run: npm test
-      - run: node --check web/app.js && node --check server.js
+      - run: node --check web/app.js && node --check web/offline.js && node --check web/sw.js && node --check server.js
 
   deploy:
     needs: validate
